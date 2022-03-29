@@ -1,9 +1,3 @@
----
-layout: page
-title: "About me"
-theme: jekyll-theme-cayman
----
-
 Hello!
 
 I am Namruth, I am graduate student in cybersecurity at Northeastern University, Boston!
