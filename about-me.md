@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About me"
-permalink: /about-me/
+theme: jekyll-theme-cayman
 ---
 
 Hello!
