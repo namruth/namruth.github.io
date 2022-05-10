@@ -4,7 +4,7 @@ Date - May 1st 2022
 Distance - 21.1k
 Time - 1:58:27
 
-I will be dividing this post into 4 sections and 2 parts in each section.
+I will be dividing this post into 2 sections and 2 parts in each section.
 
 #Training and Nutrition
 
@@ -18,10 +18,10 @@ I will be dividing this post into 4 sections and 2 parts in each section.
 - Was eating clean for most part.  
 
 **What could have been done better**
-- Didn't take recovery seriously. Missed 2 mobility/yoga sessions for many weeks.
+- Didn't take recovery seriously. Missed 2 mobility/yoga sessions per week for many weeks.
 - Injury kind of derailed the plan and I might have rushed the comeback a little.
 - Not taking hydration and post workout nutrition very seriously.
-- Was using worn out shoes which might have lead to injury.
+- Was using worn out shoes, which might have lead to injury.
 
 
 #RaceDay
@@ -32,7 +32,7 @@ I will be dividing this post into 4 sections and 2 parts in each section.
 - Race itself was fantastic. Was in a flow state as soon as the race started.
 - Not concentrating too much on the pace and time helped me run better overall.
   It might have affected negatively but I wasn't really looking for a great time
-  in this race. 
+  in this race.
 
 
 **What could have been done better**
