@@ -1,14 +1,15 @@
-## Providence half marathon '22 review
+# Providence Half Marathon 2022 Review
 
 Date - May 1st 2022
 Distance - 21.1k
 Time - 1:58:27
 
-![RaceDetails](https://drive.google.com/file/d/15uAw9Ozsaqi2PdCBZDboZM5JrPOonlPH/view?usp=sharing)
+[RaceDetails GPS](https://drive.google.com/file/d/15uAw9Ozsaqi2PdCBZDboZM5JrPOonlPH/view?usp=sharing)
+[RaceDetails BIB](https://drive.google.com/file/d/1KoZimLn6s8WIrghu_zYdgL8c6neDZkl1/view?usp=sharing)
 
 I will be dividing this post into 2 sections and 2 parts in each section.
 
-# Training and Nutrition
+## Training and Nutrition
 
 **What went well**
 - Setting the date for the race months in advance gave me a target to work for.
@@ -26,7 +27,7 @@ I will be dividing this post into 2 sections and 2 parts in each section.
 - Was using worn out shoes, which might have lead to injury.
 
 
-# RaceDay
+## RaceDay
 
 **What went well**
 - Pre race nutrition was great - Oatmeal with Banana and honey, PB sandwich. Two
