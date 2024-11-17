@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Namruth Reddy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2d3748;
+            --secondary-color: #4a5568;
+            --accent-color: #3182ce;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-section {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .publications {
+            list-style: none;
+        }
+
+        .publications li {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #e2e8f0;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .experience-company {
+            color: var(--accent-color);
+        }
+
+        .experience-date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Namruth Reddy</h1>
+            <p class="intro">Security Engineer at NVIDIA | MS Cybersecurity from Northeastern University</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/namruth" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="mailto:namruth@outlook.com"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+        </header>
+
+        <div class="profile-section">
+            <h2>About Me</h2>
+            <p>I'm a Security Engineer specializing in vulnerability management and security automation. With a strong background in both industry and research, I focus on developing innovative solutions for complex security challenges. My work combines practical security implementation with research in machine learning applications for security.</p>
+        </div>
+
+        <div class="profile-section">
+            <h2>Research Publications</h2>
+            <ul class="publications">
+                <li>
+                    <strong>Temporal Analysis and CWE Code Prediction for Software Vulnerabilities using Machine Learning</strong><br>
+                    8th IEEE International Conference on CSITSS, 2024
+                </li>
+                <li>
+                    <strong>Leveraging XGBoost Machine Learning Algorithm for CVE Exploitability Classification</strong><br>
+                    8th IEEE International Conference on CSITSS, 2024
+                </li>
+                <li>
+                    <strong>Research Paper on Automation and Computing</strong><br>
+                    3rd International Conference on ICACRS, 2024 (Upcoming)
+                </li>
+            </ul>
+        </div>
+
+        <div class="profile-section">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <div class="experience-title">Security Engineer - Vulnerability Management</div>
+                <div class="experience-company">NVIDIA</div>
+                <div class="experience-date">May 2023 - Present</div>
+                <ul>
+                    <li>Leading security workflow automation initiatives</li>
+                    <li>Developing unified case management solutions</li>
+                    <li>Managing vulnerability assessments and remediation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title">Software Engineer - Endpoint Security</div>
+                <div class="experience-company">McAfee</div>
+                <div class="experience-date">July 2018 - July 2021</div>
+                <ul>
+                    <li>Developed security solutions for MACC product</li>
+                    <li>Managed vulnerability assessments and CVSS scoring</li>
+                    <li>Led security automation initiatives</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2>Technical Skills</h2>
+            <div>
+                <span class="badge">Python</span>
+                <span class="badge">C++</span>
+                <span class="badge">Machine Learning</span>
+                <span class="badge">AWS</span>
+                <span class="badge">Vulnerability Management</span>
+                <span class="badge">Security Automation</span>
+                <span class="badge">SOAR</span>
+                <span class="badge">Metasploit</span>
+                <span class="badge">Tenable.IO</span>
+                <span class="badge">XSOAR</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
