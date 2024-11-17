@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Namruth Reddy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2d3748;
+            --secondary-color: #4a5568;
+            --accent-color: #3182ce;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+            --hover-color: #2c5282;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .projects-header {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f6f6f6 0%, #ffffff 100%);
+        }
+
+        .projects-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .projects-header p {
+            color: var(--secondary-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .project-category {
+            margin-bottom: 4rem;
+        }
+
+        .project-category h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-content p {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background-color: #e2e8f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .project-links a:hover {
+            color: var(--hover-color);
+        }
+
+        footer {
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about-me">About</a>
+                <a href="/projects">Projects</a>
+                <a href="/#publications">Publications</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="projects-header">
+        <h1>Projects & Research Work</h1>
+        <p>A collection of my security research, tools, and contributions in vulnerability management and machine learning.</p>
+    </header>
+
+    <main class="projects-container">
+        <section class="project-category">
+            <h2>Security Tools</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>REVISOR - Multi Anti-Virus File Analyzer</h3>
+                        <p>A comprehensive file analysis system that uses multiple anti-virus engines to detect malicious files. Features integration with VirusTotal, ClamAV, and Yara.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Anti-Virus</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/namruth/revisor" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Host Audits & Security Automation</h3>
+                        <p>SOAR playbooks and tools for automating security workflows, including unified case management and host security audits.</p>
+                        <div class="project-tags">
+                            <span class="tag">SOAR</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-lock"></i> Enterprise Project
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-category">
+            <h2>Research Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Mirai Botnet Analysis</h3>
+                        <p>Case study on Mirai botnets, analyzing attack patterns and mapping them to the MITRE ATT&CK framework.</p>
+                        <div class="project-tags">
+                            <span class="tag">Security Research</span>
+                            <span class="tag">IoT Security</span>
+                            <span class="tag">MITRE ATT&CK</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/namruth/mirai-analysis" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Passive Reconnaissance Framework</h3>
+                        <p>Case study on performing passive reconnaissance using tools like Spiderfoot, Shodan, and Censys.</p>
+                        <div class="project-tags">
+                            <span class="tag">OSINT</span>
+                            <span class="tag">Reconnaissance</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/namruth/passive-recon" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-category">
+            <h2>Security Automation</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Incident Response Playbooks</h3>
+                        <p>Collection of automated response playbooks for various security incidents including zero-day vulnerabilities and credential theft.</p>
+                        <div class="project-tags">
+                            <span class="tag">Automation</span>
+                            <span class="tag">Incident Response</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/namruth/ir-playbooks" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>OpenSCAP Automation</h3>
+                        <p>Security compliance and automation tools using OpenSCAP for system hardening and vulnerability assessment.</p>
+                        <div class="project-tags">
+                            <span class="tag">OpenSCAP</span>
+                            <span class="tag">Compliance</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/namruth/openscap-automation" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Namruth Reddy</p>
+    </footer>
+</body>
+</html>
