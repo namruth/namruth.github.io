@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Namruth Reddy</title>
+    <title>About - Namruth Reddy</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <style>
         :root {
@@ -12,6 +12,7 @@
             --accent-color: #3182ce;
             --text-color: #2d3748;
             --light-bg: #f7fafc;
+            --hover-color: #2c5282;
         }
 
         * {
@@ -27,175 +28,285 @@
             background-color: var(--light-bg);
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .profile-section {
+        nav {
             background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .about-header {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f6f6f6 0%, #ffffff 100%);
+        }
+
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-header p {
+            color: var(--secondary-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .about-section {
+            background: white;
             border-radius: 1rem;
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        .about-section h2 {
             color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .intro {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-            margin-bottom: 2rem;
-        }
-
-        .publications {
-            list-style: none;
-        }
-
-        .publications li {
             margin-bottom: 1.5rem;
-            padding-left: 1rem;
-            border-left: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background-color: #e2e8f0;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            margin: 0.25rem;
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
         }
 
         .experience-item {
-            margin-bottom: 1.5rem;
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
         }
 
         .experience-title {
             font-weight: bold;
             color: var(--primary-color);
+            margin-bottom: 0.5rem;
         }
 
         .experience-company {
             color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
         }
 
         .experience-date {
             color: var(--secondary-color);
             font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skills-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .tag {
+            background-color: #e2e8f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            margin: 0.25rem;
+            display: inline-block;
+        }
+
+        .education-item {
+            margin-bottom: 2rem;
+        }
+
+        .education-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-school {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Namruth Reddy</h1>
-            <p class="intro">Security Engineer at NVIDIA | MS Cybersecurity from Northeastern University</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/namruth-reddy/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/namruth" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                <a href="mailto:namruth@outlook.com"><i class="fas fa-envelope fa-2x"></i></a>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about-me">About</a>
+                <a href="/projects">Projects</a>
+                <a href="/#publications">Publications</a>
+                <a href="/#contact">Contact</a>
             </div>
-        </header>
-
-        <div class="profile-section">
-            <h2>About Me</h2>
-            <p>I'm a Security Engineer specializing in vulnerability management, tools development and security data analytics . With a strong background in both industry and research, I focus on developing innovative solutions for complex security challenges. My work combines practical security implementation with research in machine learning applications for security.</p>
         </div>
+    </nav>
 
-        <div class="profile-section">
-            <h2>Research Publications</h2>
-            <ul class="publications">
-                <li>
-                    <strong>Temporal Analysis and CWE Code Prediction for Software Vulnerabilities using Machine Learning</strong><br>
-                    8th IEEE International Conference on CSITSS, 2024
-                </li>
-                <li>
-                    <strong>Leveraging XGBoost Machine Learning Algorithm for CVE Exploitability Classification</strong><br>
-                    8th IEEE International Conference on CSITSS, 2024
-                </li>
-                <li>
-                    <strong>Data Breaches: Financial and Reputational Impacts of Vulnerabilities on Organizations to Enhance Cybersecurity Strategies</strong><br>
-                    3rd International Conference on ICACRS, 2024 (Upcoming)
-                </li>
-            </ul>
-        </div>
+    <header class="about-header">
+        <h1>About Me</h1>
+        <p>Security Engineer with a passion for machine learning and cybersecurity research</p>
+    </header>
 
-        <div class="profile-section">
+    <main class="about-container">
+        <section class="about-section">
             <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <div class="experience-title">Security Engineer - Vulnerability Management</div>
-                <div class="experience-company">NVIDIA</div>
-                <div class="experience-date">May 2023 - Present</div>
-                <ul>
-                    <li>Leading security workflow automation initiatives</li>
-                    <li>Developing unified case management solutions</li>
-                    <li>Managing vulnerability assessments and remediation</li>
-                </ul>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="experience-title">Security Engineer - Vulnerability Management</div>
+                    <div class="experience-company">NVIDIA</div>
+                    <div class="experience-date">May 2023 - Present</div>
+                    <ul>
+                        <li>Developing tools and playbooks for complex security workflows, reducing manual effort by 95%</li>
+                        <li>Building and managing unified case management system for security alerts</li>
+                        <li>Creating PowerBI dashboards for vulnerability analysis</li>
+                        <li>Handling security advisories and threat feeds</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Software Engineer - Endpoint Security</div>
+                    <div class="experience-company">McAfee</div>
+                    <div class="experience-date">July 2018 - July 2021</div>
+                    <ul>
+                        <li>Developed solutions for McAfee Application and Change Control (MACC)</li>
+                        <li>Led vulnerability management and CVSS scoring initiatives</li>
+                        <li>Created CPU usage monitoring tools for endpoint security</li>
+                        <li>Contributed to automation and documentation in SDLC</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="education-title">Master's in Cybersecurity</div>
+                <div class="education-school">Northeastern University - Boston, MA</div>
+                <div class="education-date">Graduated: April 2023</div>
+                <div>GPA: 3.91/4.0</div>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-title">Software Engineer - Endpoint Security</div>
-                <div class="experience-company">McAfee</div>
-                <div class="experience-date">July 2018 - July 2021</div>
-                <ul>
-                    <li>Developed security solutions for MACC product</li>
-                    <li>Managed vulnerability assessments and CVSS scoring</li>
-                    <li>Led security automation initiatives</li>
-                </ul>
+            <div class="education-item">
+                <div class="education-title">Bachelor's in Computer Science</div>
+                <div class="education-school">RV College of Engineering - Bangalore, India</div>
+                <div class="education-date">Graduated: June 2018</div>
+                <div>GPA: 8.69/10</div>
             </div>
-        </div>
+        </section>
 
-        <div class="profile-section">
+        <section class="about-section">
             <h2>Technical Skills</h2>
-            <div>
-                <span class="badge">Python</span>
-                <span class="badge">C++</span>
-                <span class="badge">Machine Learning</span>
-                <span class="badge">AWS</span>
-                <span class="badge">Vulnerability Management</span>
-                <span class="badge">Security Automation</span>
-                <span class="badge">SOAR</span>
-                <span class="badge">Metasploit</span>
-                <span class="badge">Tenable.IO</span>
-                <span class="badge">XSOAR</span>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Languages & Tools</h3>
+                    <span class="tag">Python</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">C</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">AWS</span>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Security Tools</h3>
+                    <span class="tag">Mitre ATT&CK</span>
+                    <span class="tag">Metasploit</span>
+                    <span class="tag">Tenable.IO</span>
+                    <span class="tag">XSOAR</span>
+                    <span class="tag">Spiderfoot</span>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Frameworks</h3>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">SOAR</span>
+                    <span class="tag">PowerBI</span>
+                    <span class="tag">ServiceNow</span>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Academic Achievements</h2>
+            <ul>
+                <li>Graduate Teaching Assistant for Network Security Practices (CY5150)</li>
+                <li>Research volunteer at Mon(IoT)r Lab working on IoT security</li>
+                <li>Published multiple papers in IEEE conferences on security and machine learning</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Namruth Reddy</p>
+    </footer>
 </body>
 </html>
