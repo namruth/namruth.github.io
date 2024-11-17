@@ -155,6 +155,107 @@
             margin-top: 2rem;
         }
 
+        /* Publications Section Styles */
+        .publications-section {
+            padding: 4rem 2rem;
+            background-color: #f8fafc;
+        }
+
+        .publications-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .publications-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .publication-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .publication-content {
+            padding: 1.5rem;
+        }
+
+        .publication-content h3 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .publication-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        .publication-meta span {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .publication-abstract {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #e2e8f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .status-tag {
+            background-color: #9f7aea;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+        }
+
+        .status {
+            color: #9f7aea;
+            font-weight: 500;
+        }
+
+        /* Existing contact section styles */
+        .contact-section {
+            background-color: white;
+            padding: 4rem 2rem;
+            margin-top: 2rem;
+        }
+
         .contact-container {
             max-width: 800px;
             margin: 0 auto;
@@ -246,6 +347,11 @@
         <div class="latest-research">
             Latest Publication: Temporal Analysis and CWE Code Prediction for Software Vulnerabilities (IEEE CSITSS 2024)
         </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/namruth-reddy/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/namruth" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="mailto:namruth@outlook.com"><i class="fas fa-envelope fa-2x"></i></a>
+        </div>
     </section>
 
     <section class="featured-content">
@@ -268,6 +374,64 @@
             <p>Developing security tools and automation solutions. Recent projects include unified case management systems and vulnerability analysis frameworks.</p>
             <br>
             <a href="https://github.com/namruth" target="_blank" class="button">View on GitHub</a>
+        </div>
+    </section>
+
+    <section id="publications" class="publications-section">
+        <div class="publications-container">
+            <h2>Research Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="publication-content">
+                        <h3>Temporal Analysis and CWE Code Prediction for Software Vulnerabilities using Machine Learning</h3>
+                        <div class="publication-meta">
+                            <span class="conference">8th IEEE International Conference on CSITSS</span>
+                            <span class="year">2024</span>
+                            <span class="paper-id">Paper ID: 943</span>
+                        </div>
+                        <p class="publication-abstract">Research focusing on temporal analysis of software vulnerabilities and using machine learning for CWE code prediction.</p>
+                        <div class="publication-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">CWE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-content">
+                        <h3>Leveraging XGBoost Machine Learning Algorithm for Common Vulnerabilities and Exposures Exploitability Classification</h3>
+                        <div class="publication-meta">
+                            <span class="conference">8th IEEE International Conference on CSITSS</span>
+                            <span class="year">2024</span>
+                            <span class="paper-id">Paper ID: 611</span>
+                        </div>
+                        <p class="publication-abstract">Implementation of XGBoost algorithm for classifying CVE exploitability, enhancing vulnerability assessment processes.</p>
+                        <div class="publication-tags">
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">CVE</span>
+                            <span class="tag">Classification</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-content">
+                        <h3>Research Paper on Automation and Computing</h3>
+                        <div class="publication-meta">
+                            <span class="conference">3rd International Conference on ICACRS</span>
+                            <span class="year">2024</span>
+                            <span class="status">Upcoming</span>
+                        </div>
+                        <p class="publication-abstract">Accepted for presentation at ICACRS 2024. Research focusing on automation and computing systems.</p>
+                        <div class="publication-tags">
+                            <span class="tag">Automation</span>
+                            <span class="tag">Computing</span>
+                            <span class="status-tag">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
