@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Namruth Reddy</title>
+    <title>Namruth Reddy - Security Engineer & Researcher</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <style>
         :root {
@@ -12,6 +12,7 @@
             --accent-color: #3182ce;
             --text-color: #2d3748;
             --light-bg: #f7fafc;
+            --hover-color: #2c5282;
         }
 
         * {
@@ -25,55 +26,103 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--light-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .profile-section {
+        nav {
             background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            margin-top: 4rem;
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f6f6f6 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .featured-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
             border-radius: 1rem;
             padding: 2rem;
-            margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
 
-        h1 {
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
             color: var(--primary-color);
-            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        h2 {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
         }
 
-        .intro {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-            margin-bottom: 2rem;
-        }
-
-        .publications {
-            list-style: none;
-        }
-
-        .publications li {
-            margin-bottom: 1.5rem;
-            padding-left: 1rem;
-            border-left: 3px solid var(--accent-color);
+        .button:hover {
+            background-color: var(--hover-color);
         }
 
         .social-links {
@@ -93,109 +142,170 @@
             color: var(--accent-color);
         }
 
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background-color: #e2e8f0;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            margin: 0.25rem;
-        }
-
-        .experience-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .experience-title {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .experience-company {
+        .latest-research {
+            padding: 1rem;
+            margin-top: 1rem;
+            font-style: italic;
             color: var(--accent-color);
         }
 
-        .experience-date {
+        .contact-section {
+            background-color: white;
+            padding: 4rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-intro {
+            text-align: center;
             color: var(--secondary-color);
-            font-size: 0.9rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: var(--light-bg);
+            border-radius: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .contact-detail {
+            flex: 1;
+        }
+
+        .contact-detail h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-detail a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-detail a:hover {
+            color: var(--hover-color);
+        }
+
+        footer {
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: auto;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Namruth Reddy</h1>
-            <p class="intro">Security Engineer at NVIDIA | MS Cybersecurity from Northeastern University</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/namruth" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                <a href="mailto:namruth@outlook.com"><i class="fas fa-envelope fa-2x"></i></a>
-            </div>
-        </header>
-
-        <div class="profile-section">
-            <h2>About Me</h2>
-            <p>I'm a Security Engineer specializing in vulnerability management and security automation. With a strong background in both industry and research, I focus on developing innovative solutions for complex security challenges. My work combines practical security implementation with research in machine learning applications for security.</p>
-        </div>
-
-        <div class="profile-section">
-            <h2>Research Publications</h2>
-            <ul class="publications">
-                <li>
-                    <strong>Temporal Analysis and CWE Code Prediction for Software Vulnerabilities using Machine Learning</strong><br>
-                    8th IEEE International Conference on CSITSS, 2024
-                </li>
-                <li>
-                    <strong>Leveraging XGBoost Machine Learning Algorithm for CVE Exploitability Classification</strong><br>
-                    8th IEEE International Conference on CSITSS, 2024
-                </li>
-                <li>
-                    <strong>Research Paper on Automation and Computing</strong><br>
-                    3rd International Conference on ICACRS, 2024 (Upcoming)
-                </li>
-            </ul>
-        </div>
-
-        <div class="profile-section">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <div class="experience-title">Security Engineer - Vulnerability Management</div>
-                <div class="experience-company">NVIDIA</div>
-                <div class="experience-date">May 2023 - Present</div>
-                <ul>
-                    <li>Leading security workflow automation initiatives</li>
-                    <li>Developing unified case management solutions</li>
-                    <li>Managing vulnerability assessments and remediation</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-title">Software Engineer - Endpoint Security</div>
-                <div class="experience-company">McAfee</div>
-                <div class="experience-date">July 2018 - July 2021</div>
-                <ul>
-                    <li>Developed security solutions for MACC product</li>
-                    <li>Managed vulnerability assessments and CVSS scoring</li>
-                    <li>Led security automation initiatives</li>
-                </ul>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about-me">About</a>
+                <a href="https://github.com/namruth" target="_blank">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
+    </nav>
 
-        <div class="profile-section">
-            <h2>Technical Skills</h2>
-            <div>
-                <span class="badge">Python</span>
-                <span class="badge">C++</span>
-                <span class="badge">Machine Learning</span>
-                <span class="badge">AWS</span>
-                <span class="badge">Vulnerability Management</span>
-                <span class="badge">Security Automation</span>
-                <span class="badge">SOAR</span>
-                <span class="badge">Metasploit</span>
-                <span class="badge">Tenable.IO</span>
-                <span class="badge">XSOAR</span>
+    <section class="hero">
+        <h1>Namruth Reddy</h1>
+        <p>Security Engineer at NVIDIA | Machine Learning Researcher</p>
+        <div class="latest-research">
+            Latest Publication: Temporal Analysis and CWE Code Prediction for Software Vulnerabilities (IEEE CSITSS 2024)
+        </div>
+    </section>
+
+    <section class="featured-content">
+        <div class="card">
+            <h3>Research Focus</h3>
+            <p>Exploring machine learning applications in vulnerability management and security automation. Published research in CVE classification and software vulnerability prediction.</p>
+            <br>
+            <a href="#publications" class="button">View Publications</a>
+        </div>
+
+        <div class="card">
+            <h3>Industry Experience</h3>
+            <p>Currently leading security initiatives at NVIDIA, focusing on vulnerability management and security automation. Previous experience at McAfee in endpoint security.</p>
+            <br>
+            <a href="/about-me" class="button">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>Projects & Tools</h3>
+            <p>Developing security tools and automation solutions. Recent projects include unified case management systems and vulnerability analysis frameworks.</p>
+            <br>
+            <a href="https://github.com/namruth" target="_blank" class="button">View on GitHub</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p class="contact-intro">Feel free to reach out for collaborations, research discussions, or professional inquiries.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-detail">
+                        <h3>Email</h3>
+                        <a href="mailto:namruth@outlook.com">namruth@outlook.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="contact-detail">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/namruth-reddy/" target="_blank">Connect with me</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div class="contact-detail">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/namruth" target="_blank">View my projects</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Namruth Reddy</p>
+    </footer>
 </body>
 </html>
